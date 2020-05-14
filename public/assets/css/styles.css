@@ -1,0 +1,17 @@
+.col-lg-8.col-md-12.map {
+  min-height: 200px !important;
+}
+
+@keyframes spinner {
+  0% {
+    rotate: initial;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}
+
+.spinner-anim {
+  animation: spinner 0.5s infinite;
+}

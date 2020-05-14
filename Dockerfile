@@ -1,4 +1,4 @@
-FROM node:latest AS builder
+FROM node:12 AS builder
 WORKDIR /app
 
 RUN npm install react-scripts -g --silent
@@ -10,7 +10,7 @@ COPY . .
 
 RUN yarn run build
 
-FROM node:latest
+FROM node:12
 RUN yarn global add serve
 WORKDIR /app
 COPY --from=builder /app/build .

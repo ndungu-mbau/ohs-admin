@@ -21,7 +21,7 @@ export default class Modal extends Component{
       lat: 25.3,
       lng: 0.25
     },
-    location_name: ""
+    location_name: "Unknown"
   }
 
   show() {
@@ -51,7 +51,7 @@ export default class Modal extends Component{
         lat: 25.3,
         lng: 0.25
       },
-      location_name: ""
+      location_name: "Unknown"
     })
   }
 

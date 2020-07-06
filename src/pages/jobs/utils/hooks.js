@@ -68,8 +68,14 @@ export function useLv3Approval(job){
 export function useLv4Approval(job){
   const { id: loggedInId } = JSON.parse(localStorage.getItem("user"))
   const {
-    ohs:{
-      id: ohsId
+    scope: {
+      department: {
+        division: {
+          ohs: {
+            id: ohsId
+          }
+        }
+      }
     },
     scope: {
       hazard

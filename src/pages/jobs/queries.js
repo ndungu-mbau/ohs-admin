@@ -68,19 +68,15 @@ query($job: Ujob!){
             name
             phone
           }
+          ohs{
+            id
+            name
+            phone
+          }
         }
       }
 		}
     author{
-      id
-      name
-      phone
-      type{
-        id
-        name
-      }
-    }
-    ohs{
       id
       name
       phone

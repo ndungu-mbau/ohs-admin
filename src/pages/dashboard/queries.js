@@ -45,15 +45,6 @@ export const DATA_QUERY = gql`{
         name
       }
     }
-    ohs{
-      id
-      name
-      phone
-      type{
-        id
-        name
-      }
-    }
 		technician{
 			id
 			name

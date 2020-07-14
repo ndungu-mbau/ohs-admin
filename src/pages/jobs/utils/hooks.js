@@ -70,10 +70,8 @@ export function useLv4Approval(job){
   const {
     scope: {
       department: {
-        division: {
-          ohs: {
-            id: ohsId
-          }
+        ohs: {
+          id: ohsId
         }
       }
     },

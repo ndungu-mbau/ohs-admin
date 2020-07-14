@@ -60,15 +60,15 @@ query($job: Ujob!){
           name
           phone
         }
+        ohs{
+          id
+          name
+          phone
+        }
         division{
           id
           name
           hod{
-            id
-            name
-            phone
-          }
-          ohs{
             id
             name
             phone

@@ -4401,9 +4401,6 @@ doctrine@1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-1.5.0.tgz#379dce730f6166f76cefa4e6707a159b02c5a6fa"
   integrity sha1-N53Ocw9hZvds76TmcHoVmwLFpvo=
-  dependencies:
-    esutils "^2.0.2"
-    isarray "^1.0.0"
 
 doctrine@^2.1.0:
   version "2.1.0"
@@ -11207,6 +11204,11 @@ tr46@^1.0.1:
   integrity sha1-qLE/1r/SSJUZZ0zN5VujaTtwbQk=
   dependencies:
     punycode "^2.1.0"
+
+transverse-nested@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/transverse-nested/-/transverse-nested-1.0.0.tgz#8a0bdc300a6703a1d95190bdc3ad68bb28994fef"
+  integrity sha512-ycMhdq2WIfMAVINAbvsnBp2rbMy92bJWxPInqCPekS6kZRwxN5C10JIAOLSE4Hsmt4m3Qmd9e4AtQB5mlDt9eA==
 
 ts-invariant@^0.4.0, ts-invariant@^0.4.4:
   version "0.4.4"

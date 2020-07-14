@@ -1,5 +1,5 @@
 import React from "react";
-import transverseNested from "../utils/transverse-nested"
+import transverseNested from "transverse-nested"
 
 const DataTable = props => {
   const { options = { deleteable: false, editable: false, viewable: false }} = props

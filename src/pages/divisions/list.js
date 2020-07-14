@@ -114,10 +114,6 @@ const List = props => {
                 {
                   label: "Head of Division Name",
                   key: "hod.name"
-                },
-                {
-                  label: "No.of Users",
-                  key: "users.length"
                 }]}
               />
             </div>

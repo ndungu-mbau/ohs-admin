@@ -9,10 +9,6 @@ export const DIVISIONS_QUERY = gql`{
       id
 			name
 		}
-    users{
-      id
-      name
-    }
 	}
 }`;
 

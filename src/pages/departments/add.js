@@ -28,11 +28,11 @@ export default class Modal extends Component{
 
   save = async e => {
     e.preventDefault()
-    const { name, division, manager } = this.state
-    await this.props.save({ name, division, manager })
+    const { name, division, manager, ohs } = this.state
+    await this.props.save({ name, division, manager, ohs })
 
     this.hide()
-    this.setState({ name: "", division: "", manager: "" })
+    this.setState({ name: "", division: "", manager: "", ohs: "" })
   }
 
   savePm = async data => {
@@ -95,9 +95,9 @@ export default class Modal extends Component{
                           manager: e.target.value
                         })}
                       >
-                        <option value="">Select Project Manager</option>
-                        {this.props.users.filter(user => user.type.permissions.includes("PROJECT_MANAGER")).map(division => (
-                          <option key={division.id} value={division.id}>{division.name}</option>
+                        <option value="">Select Project Manager/Team Lead</option>
+                        {this.props.users.filter(user => user.type.permissions.includes("PROJECT_MANAGER")).map(user => (
+                          <option key={user.id} value={user.id}>{user.name}</option>
                         ))}
                       </select>
                     </div>

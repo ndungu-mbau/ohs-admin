@@ -65,6 +65,11 @@ query($job: Ujob!){
           name
           phone
         }
+        team_leads{
+          id
+          name
+          phone
+        }
         division{
           id
           name

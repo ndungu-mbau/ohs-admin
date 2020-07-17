@@ -25,14 +25,17 @@ export function useLv2Approval(job){
       department: {
         manager: {
           id: pmId
-        }
+        },
+        team_leads
       }
     },
     lv1_approval = null,
     lv2_approval
   } = job
 
-  if(lv1_approval && lv1_approval.status === "ACCEPTED" && pmId === loggedInId && lv2_approval === null){
+  const team_leads_ids = team_leads.map(({ id }) => id)
+
+  if(lv1_approval && lv1_approval.status === "ACCEPTED" && (pmId === loggedInId || team_leads_ids.includes(loggedInId)) && lv2_approval === null){
     return [true, "LVL_2"]
   } else {
     return [false, null]

@@ -61,7 +61,7 @@ export default class Modal extends Component{
                   </div>
                   <div className="col-md-12 col-lg-12">
                     <ul class="list-group list-group-flush">
-                      {["OHS", "HOD", "TECHNICIAN", "AUTHOR", "PROJECT_MANAGER"].map(permission => {
+                      {["OHS", "HOD", "TECHNICIAN", "AUTHOR", "PROJECT_MANAGER", "TEAM_LEAD"].map(permission => {
                         return <li
                           className="list-group-item"
                           style={{ cursor: 'pointer' }}>

@@ -39,7 +39,7 @@ export default class Modal extends Component{
           <form id={`#${modalNumber}form`} onSubmit={this.save}>
             <div className="modal-content bg-secondary">
               <div className="modal-header">
-                <h4 className="modal-title">Create Project Manager/Team Lead</h4>
+                <h4 className="modal-title">Create Project Manager</h4>
                 <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={this.hide}>
                   <span aria-hidden="true">&times;</span>
                 </button>

@@ -95,7 +95,7 @@ export default class Modal extends Component{
                           manager: e.target.value
                         })}
                       >
-                        <option value="">Select Project Manager/Team Lead</option>
+                        <option value="">Select Project Manager</option>
                         {this.props.users.filter(user => user.type.permissions.includes("PROJECT_MANAGER")).map(user => (
                           <option key={user.id} value={user.id}>{user.name}</option>
                         ))}

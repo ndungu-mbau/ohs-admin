@@ -14,7 +14,7 @@ const editModalInstance = new EditModal()
 const deleteModalInstance = new DeleteModal()
 
 const List = props => {
-  const { type: { permissions }} = JSON.parse(window.localStorage.getItem("user"))
+  const { type: { permissions }} = JSON.parse(window.sessionStorage.getItem("user"))
   const history = useHistory()
   let { loading, data: jobsData, error } = useQuery(JOBS_QUERY, {
     fetchPolicy: "network-only"

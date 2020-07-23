@@ -22,14 +22,14 @@ import verify from "./pages/verify"
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={(props) => (
-    localStorage.getItem('authorization')
+    sessionStorage.getItem('authorization')
       ? <Component {...props} />
       : <Redirect to='/login' />
   )} />
 )
 
 const ProtectedRoute = ({ component: Component, ...rest }) => (
-  JSON.parse(localStorage.getItem('user')).type.permissions.includes("OHS") ? <PrivateRoute component={Component} {...rest} /> : <Redirect to="/" />
+  JSON.parse(sessionStorage.getItem('user')).type.permissions.includes("OHS") ? <PrivateRoute component={Component} {...rest} /> : <Redirect to="/" />
 )
 
 function App() {

@@ -5,7 +5,7 @@ import { DATA_QUERY } from "./queries"
 import Loader from "../../components/loader"
 
 const Dash = props => {
-  const user = JSON.parse(window.localStorage.getItem("user"))
+  const user = JSON.parse(window.sessionStorage.getItem("user"))
   const { data, loading, error } = useQuery(DATA_QUERY, {
     fetchPolicy: "network-only"
   })

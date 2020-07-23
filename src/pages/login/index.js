@@ -18,8 +18,8 @@ const Login = props => {
 
     if(ok){
       if(user.type !== "TECHNICIAN"){
-        window.localStorage.setItem('authorization', token)
-        window.localStorage.setItem("user", JSON.stringify(user))
+        window.sessionStorage.setItem('authorization', token)
+        window.sessionStorage.setItem("user", JSON.stringify(user))
         setLoading(false)
         return props.history.push({ pathname: '/' })
       } else {

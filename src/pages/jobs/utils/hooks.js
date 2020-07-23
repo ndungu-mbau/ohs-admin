@@ -1,5 +1,5 @@
 export function useLv1Approval(job){
-  const { id: loggedInId } = JSON.parse(localStorage.getItem("user"))
+  const { id: loggedInId } = JSON.parse(sessionStorage.getItem("user"))
   const {
     status:{
       type
@@ -19,7 +19,7 @@ export function useLv1Approval(job){
 }
 
 export function useLv2Approval(job){
-  const { id: loggedInId } = JSON.parse(localStorage.getItem("user"))
+  const { id: loggedInId } = JSON.parse(sessionStorage.getItem("user"))
   const {
     scope: {
       department: {
@@ -43,7 +43,7 @@ export function useLv2Approval(job){
 }
 
 export function useLv3Approval(job){
-  const { id: loggedInId } = JSON.parse(localStorage.getItem("user"))
+  const { id: loggedInId } = JSON.parse(sessionStorage.getItem("user"))
   const {
     scope: {
       department: {
@@ -69,7 +69,7 @@ export function useLv3Approval(job){
 }
 
 export function useLv4Approval(job){
-  const { id: loggedInId } = JSON.parse(localStorage.getItem("user"))
+  const { id: loggedInId } = JSON.parse(sessionStorage.getItem("user"))
   const {
     scope: {
       department: {

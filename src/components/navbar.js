@@ -3,12 +3,12 @@ import { Link, useHistory } from "react-router-dom"
 
 const Navbar = props => {
   const history = useHistory()
-  const { name } = JSON.parse(localStorage.getItem("user"))
+  const { name } = JSON.parse(sessionStorage.getItem("user"))
 
   const onClick = e => {
     e.preventDefault()
-    window.localStorage.removeItem("authorization")
-    window.localStorage.removeItem("user")
+    window.sessionStorage.removeItem("authorization")
+    window.sessionStorage.removeItem("user")
     history.replace("/login")
   }
 

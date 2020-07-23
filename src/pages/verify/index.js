@@ -14,7 +14,7 @@ const Reset = props => {
     })
 
     if(ok){
-      window.localStorage.setItem("authorization", token)
+      window.sessionStorage.setItem("authorization", token)
       return props.history.push({ pathname: '/' })
     } else {
       window.Swal.fire({

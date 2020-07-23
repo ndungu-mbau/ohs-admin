@@ -5,12 +5,12 @@ export default ({ location : { pathname = "/" } = {} }) => {
   
   const { canView } = {
     get canView(){
-      const { type : { permissions } } = JSON.parse(localStorage.getItem("user"))
+      const { type : { permissions } } = JSON.parse(sessionStorage.getItem("user"))
       return permissions.includes("OHS")
     }
   }
 
-  const { type : { permissions } } = JSON.parse(localStorage.getItem("user"))
+  const { type : { permissions } } = JSON.parse(sessionStorage.getItem("user"))
 
   return (
     <nav className="navbar navbar-vertical fixed-left navbar-expand-lg navbar-light bg-white" id="sidenav-main">

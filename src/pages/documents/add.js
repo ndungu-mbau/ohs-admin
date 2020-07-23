@@ -46,7 +46,7 @@ export default class Modal extends Component{
         method: "post",
         headers: new Headers({
           'Accept': 'application/json',
-          'Authorization': window.localStorage.getItem("authorization")
+          'Authorization': window.sessionStorage.getItem("authorization")
         }),
         body: data,
       }).then(res => {

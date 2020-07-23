@@ -10,7 +10,7 @@ import view from "./view"
 // import { UPDATE_USER } from "../users/queries"
 
 const Index = ({ location }) => {
-  // const { id } = JSON.parse(localStorage.getItem("user"))
+  // const { id } = JSON.parse(sessionStorage.getItem("user"))
   // const [updateUser, { error }] = useMutation(UPDATE_USER)
   // if(error) console.log(error)
 

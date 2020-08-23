@@ -41,7 +41,7 @@ const DataTable = props => {
                       title="Edit details"
                       type="button"
                       className="btn btn-sm btn-outline-secondary"
-                      hidden={options.editable(row)}
+                      hidden={!options.editable(row)}
                       onClick={() => {
                         props.edit(row);
                       }}

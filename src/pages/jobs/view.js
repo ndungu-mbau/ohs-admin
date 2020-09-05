@@ -30,6 +30,8 @@ const View = props => {
   const [remove, setRemove] = useState({})
   const [cancel, setCancelProp] = useState({})
 
+  const [isApproving, setIsApproving] = useState(false)
+
   const [removeJob, { error: mutationError }] = useMutation(DELETE_JOB, {
     refetchQueries: [{ query: JOBS_QUERY }]
   })
@@ -46,6 +48,8 @@ const View = props => {
       reason,
       status,
     })
+
+    setIsApproving(true)
     
     await approve({
       variables: {
@@ -57,6 +61,8 @@ const View = props => {
         }
       }
     })
+
+    setIsApproving(false)
     history.push('/jobs')
   }
 
@@ -638,11 +644,11 @@ const View = props => {
             <div className="card-footer">
               <div className="row mt-3" hidden={!(canApprove1 || canApprove2 || canApprove3 || canApprove4)}>
                 <div className="col d-flex justify-content-between">
-                  <button className="btn btn-icon btn-danger btn-lg" type="button" onClick={() => createApprovalDialog({ status: "REJECTED", level: (level1||level2||level3 || level4)})}>
+                  <button disabled={isApproving} className="btn btn-icon btn-danger btn-lg" type="button" onClick={() => createApprovalDialog({ status: "REJECTED", level: (level1||level2||level3 || level4)})}>
                     <span className="btn-inner--icon"><i className="ni ni-fat-remove"></i></span>
                     <span className="btn-inner--text">Reject</span>
                   </button>
-                  <button className="btn btn-icon btn-success btn-lg" type="button" onClick={() => createApproval({ status: "ACCEPTED", reason: "Approved", level: level1||level2||level3||level4 })}>
+                  <button disabled={isApproving} className="btn btn-icon btn-success btn-lg" type="button" onClick={() => createApproval({ status: "ACCEPTED", reason: "Approved", level: level1||level2||level3||level4 })}>
                     <span className="btn-inner--icon"><i className="ni ni-check-bold"></i></span>
                     <span className="btn-inner--text">Approve</span>
                   </button>
